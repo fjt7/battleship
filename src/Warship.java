@@ -2,7 +2,7 @@ public class Warship {
     int[] locationCells;
     int numOfHits = 0;
 
-    public void setLocationOfCells(int[] locs){
+    public void setLocationCells(int[] locs){
         locationCells = locs;
     }
 
@@ -10,14 +10,14 @@ public class Warship {
         int guess = Integer.parseInt(stringGuess);
         String result = "Miss!";
         for (int cell : locationCells){
-            if (guess = cell){
+            if (guess == cell){
                 result = "Hit!";
                 numOfHits++;
                 break;
             }
         }
         if (numOfHits == locationCells.length){
-            result = "Kill!"
+            result = "Kill!";
         }
         System.out.println(result);
         return result;
